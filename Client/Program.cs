@@ -32,9 +32,9 @@ namespace Client
                     FirstName = "Roza",
                     LastName = "Medini"
                 };
-            // System.Console.WriteLine("***CREATING PEOPLE***");
-            // System.Console.WriteLine(Creating(client,obj));
-            // System.Console.WriteLine(Creating(client, obj2));
+             System.Console.WriteLine("***CREATING PEOPLE***");
+             System.Console.WriteLine(Creating(client,obj));
+             System.Console.WriteLine(Creating(client, obj2));
 
             // System.Console.WriteLine("***READING PEOPLE***");
             // await Reading(client,"0f51ca69-c2b0-40de-9620-bb16c8e7f953");
@@ -47,13 +47,13 @@ namespace Client
             };
 
             // System.Console.WriteLine("***UPDATING PEOPLE***");
-            // await Updating(client,objtoUpdate,"0f51ca69-c2b0-40de-9620-bb16c8e7f953");
+            //  await Updating(client,objtoUpdate,"0f51ca69-c2b0-40de-9620-bb16c8e7f953");
             
             //Deleting(client,"Anis");
-            //   Deleting(client,"Roza");
+            //Deleting(client,"Roza");
 
 
-            // System.Console.WriteLine("***LIST OF PEOPLE***");
+             System.Console.WriteLine("***LIST OF PEOPLE***");
             System.Console.WriteLine(await ListOfPerson(client));
 
 
