@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+message PersoneModel {
+    string id = 1;
+    string first_name = 2;
+    string last_name = 3;
+}
+
+message personeCreateRequest {
+    PersoneModel persone = 1;
+}
+
+message personeCreateResponse {
+    string result = 1;
+}
+
+message personeListRequest {}
+message personeListResponse {
+    repeated PersoneModel persone = 1;
+}
+message personReadRequest {
+    string id = 1;
+}
+message personReadResponse {
+    PersoneModel persone = 1;
+}
+message personUpdateRequest {
+     string toFind = 1;
+     PersoneModel persone = 2;
+
+}
+message personUpdateResponse {
+    PersoneModel persone = 1;
+}
+
+message personeDeleteRequest {
+    string toFind = 1;
+}
+
+message personeDeleteResponse {}
+
+
+
+
+service Person {
+
+    rpc createPersone (personeCreateRequest) returns (personeCreateResponse);
+    rpc ListPersone (personeListRequest) returns (personeListResponse);
+    rpc readPerson (personReadRequest) returns (personReadResponse);
+    rpc updatePerson (personUpdateRequest) returns (personUpdateResponse);
+    rpc deletePerson (personeDeleteRequest) returns (personeDeleteResponse);
+}
+
+
